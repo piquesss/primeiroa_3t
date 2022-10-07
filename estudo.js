@@ -35,3 +35,9 @@ function escreva(){
      }
  }
 
+ function calcula(){
+    let c = document.getElementById("Valor").value;
+    let j = document.getElementById("Juros").value;
+    let r = c * (1 +(j/100));
+    document.write("Resultado: " + r);
+ }
