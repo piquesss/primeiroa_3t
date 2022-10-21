@@ -34,26 +34,42 @@ function escreva(){
          document.write("O quadrado de " + i + " é " + (i*i)+ "<br>")
      }
  }
-
+function moeda(atual){
+     return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+}
  function calcula(){
-    let c = document.getElementById("Valor").value;
+    let c = document.getElementById("Valor").value  = "";
     let j = document.getElementById("Juros").value;
+    if (!Number (c)){
+      alert("O valor do capital deve ser numérico.");
+      document.getElementById("valor").value = "";
+      let j =  document.getElementById("valor").focus();
+      document.getElementById("juros").value = "";
+      return
+    }
+    if (!Number (j)){
+        alert("O valor do juros deve ser numérico.");
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+        return
+      }
     let r = c * (1 +(j/100));
-    document.write("Resultado: " + r);
+    document.write("Resultado: " + moeda(r));
  }
-let  op = "";
-function operação (ope){
-    op = ope;
-
-}
-function calcule (){
-    let v1 =  document.getElementById("v1").value;
-    let v2 = document.getElementById("v2").value;
-    let r = 0;
-
-    if(op == "+"){
-        r = Number(v1) + Number(v2);
-}
-
-}
-document.getElementById("resultado").innerHTML = r;
+ let  op = "";
+ function operação (ope){
+     op = ope;
+ 
+ }
+ function calcule (){
+     let v1 =  document.getElementById("v1").value;
+     let v2 = document.getElementById("v2").value;
+     let r = 0;
+ 
+     if(op == "+"){
+         r = Number(v1) + Number(v2);
+ }
+ 
+ }
+ document.getElementById("resultado").innerHTML = r;
+ 
