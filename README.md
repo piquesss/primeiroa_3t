@@ -1,7 +1,7 @@
-# Terceiro trimestre
+# TERCEIRO trimestre
 
-## Identificação
-Rodrigo Piques - nr. 30
+## identificaçao
+Nome: Rodrigo Vieira Piques  N: 30
 
-## Conteúdo
-HTML, CSS e javaScript
+## conteudo 
+HTML, CSS e javaScriptt
