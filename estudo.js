@@ -1,5 +1,5 @@
 let tabuada = 1;
-let nome = "Rodrigo";
+let nome = "rodrigo";
 
 function escreva() {
     document.write("tabuada do " + tabuada + "<br>")
@@ -60,16 +60,17 @@ if (!Number(t)) {
     return
 }
 let r = c;
+let texto = "";
 for (let m = 1; m <= t; m++) {
     r = c * (1 + (j / 100));
     c = r;
-    texto += m + " - : " + moeda(r) + "<br>"
-    document.write("Mes " + m + " - valor: " + moeda(r) + "<br>");
-}
-document.getElementById("total").innerHTML = texto;
-document.getElementById("total").innerHTML = moeda;
+    texto +=  m + " : " + moeda(r) + "<br>"
+   // document.write("Mes " + m + " - valor: " + moeda(r) + "<br>");
 
-document.write("resultado: " + moeda(r));
+}
+document.getElementById("listameses").innerHTML = texto;
+document.getElementById("total").innerHTML = moeda(r);
+//document.write("resultado: " + moeda(r));
 }
 
 let op = "";
